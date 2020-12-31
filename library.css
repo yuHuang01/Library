@@ -1,0 +1,155 @@
+html,
+body{
+    height: 100%;
+}
+body{
+    --background-color: rgb(54, 54, 54);
+    --header-background: rgb(41, 40, 40);
+    --title-color: rgb(243, 201, 87);
+    --books-background: rgb(46, 45, 45);
+    --icon-first: rgb(216, 100, 5);
+    --icon-sec: black;
+    --button-text-color: black;
+    --input-bg-color: rgb(252, 252, 252);
+    transition: 1s;
+
+    background-color: var(--background-color);
+    padding: 0px;
+    margin: 0px;
+    font-style: italic;
+}
+body.brigth{
+    --background-color: rgb(248, 239, 222);
+    --header-background: rgb(248, 218, 163);
+    --title-color: rgb(228, 120, 31);
+    --books-background:rgb(247, 232, 205);
+    --icon-first: black;
+    --icon-sec: rgb(216, 100, 5);
+    --button-text-color: white;
+    --input-bg-color: white;
+}
+
+header{
+    text-align: center;
+    position: relative;
+    top: 0px;
+    height: 50px;
+    background-color: var(--header-background);
+}
+header h1{
+    margin: 0px;
+    font-size: 40px;
+    color: var(--title-color);
+}
+#theme{
+    margin-top: 10px;
+    text-align: center;
+}
+#light{
+    width: 50px;
+    height: 50px;
+    fill: var(--icon-sec);
+}
+#light:hover{
+    fill: var(--icon-first);
+    transition: 1.5s;
+}
+
+#main{
+    background-color: var(--header-background);
+    width: 65rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+#bookForm{
+    height: 11rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 31rem 31rem;
+    grid-template-rows: 3rem 2.5rem 2.5rem 2rem;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "title title"
+    "author genres"
+    "release pages"
+    "submit submit"
+}
+
+.formDiv{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--header-background);
+}
+.formInput{
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--input-bg-color);
+    outline: none;
+}
+.formLabel{
+    color: var(--title-color);
+    font-weight: bold;
+}
+#titleDiv{
+    grid-area: title;
+}
+#authorDiv{
+    grid-area: author;
+}
+#genresDiv{
+    grid-area: genres;
+}
+#releaseDiv{
+    grid-area: release;
+}
+#pagesDiv{
+    grid-area: pages;
+}
+#submit{
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 10px 30px 10px 30px;
+    grid-area: submit;
+    justify-self: center;
+    background-color: var(--title-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    outline: none;
+}
+#submit:hover{
+    transform: scale(1.1);
+}
+
+
+#books{
+    background-color: var(--books-background);
+    height: 600px;
+}
+#searchDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--books-background);
+    padding-top: 5px;
+}
+#searchDiv label{
+    color: var(--title-color);
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+#searchDiv input{
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--input-bg-color);
+    outline: none;
+}
