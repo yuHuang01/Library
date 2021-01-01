@@ -11,6 +11,7 @@ body{
     --icon-sec: black;
     --button-text-color: black;
     --input-bg-color: rgb(252, 252, 252);
+    --shadow-color: rgb(26, 25, 25);
     transition: 1s;
 
     background-color: var(--background-color);
@@ -27,6 +28,7 @@ body.brigth{
     --icon-sec: rgb(216, 100, 5);
     --button-text-color: white;
     --input-bg-color: white;
+    --shadow-color: rgb(247, 206, 131);
 }
 
 header{
@@ -55,6 +57,7 @@ header h1{
     transition: 1.5s;
 }
 
+/*Main part*/
 #main{
     background-color: var(--header-background);
     width: 65rem;
@@ -63,12 +66,14 @@ header h1{
     flex-direction: column;
     margin-top: 40px;
 }
+
+/*Form*/
 #bookForm{
-    height: 11rem;
+    height: 13rem;
     padding: 1.5rem;
     display: grid;
-    grid-template-columns: 31rem 31rem;
-    grid-template-rows: 3rem 2.5rem 2.5rem 2rem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 25% 25% 20%;
     grid-gap: 5px;
     grid-template-areas: 
     "title title"
@@ -76,7 +81,6 @@ header h1{
     "release pages"
     "submit submit"
 }
-
 .formDiv{
     display: flex;
     flex-direction: column;
@@ -110,9 +114,7 @@ header h1{
 }
 #submit{
     height: 30px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    padding: 10px 30px 10px 30px;
+    padding: 10px 15px 0px 15px;
     grid-area: submit;
     justify-self: center;
     background-color: var(--title-color);
@@ -121,15 +123,16 @@ header h1{
     border-radius: 5px;
     font-weight: bold;
     outline: none;
+    text-align: center;
 }
 #submit:hover{
     transform: scale(1.1);
 }
 
-
+/* Search part*/
 #books{
     background-color: var(--books-background);
-    height: 600px;
+    min-height: 400px;
 }
 #searchDiv{
     display: flex;
@@ -152,4 +155,80 @@ header h1{
     border: none;
     background-color: var(--input-bg-color);
     outline: none;
+}
+
+/*Added book*/
+.book{
+    background-color: var(--input-bg-color);
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px 10px 10px 15px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 70% 15% 15%;
+}
+.book p {
+    text-decoration: underline;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.book:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+.bookBtn{
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 7px 5px 7px;
+    color: white;
+    outline: none;
+}
+.read{
+    background-color: rgb(211, 156, 18);
+    justify-self: center;
+}
+.delete{
+    background-color: rgb(175, 4, 4);
+    justify-self: center;
+}
+
+
+#footer{
+    background-color: rgb(41, 41, 46);
+    height: 35px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-top: solid;
+    border-width: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#madeBy{
+    color: white;
+    margin-left: 10px;
+}
+#madeBy a {
+    margin-left: 3px;
+    text-decoration: none;
+    color: white;
+}
+#madeBy a:hover{
+    font-weight: bold;
+}
+#odin{
+    color: white;
+    position: absolute;
+    right: 10px;
+}
+
+@media (max-width: 1100px){
+    #main{
+        width: 40rem;
+        transition: 1s;
+    }
 }
