@@ -67,7 +67,7 @@ let submit = document.querySelector("#submit").addEventListener("click", () => {
 
 //Searchbar
 let searchBar = document.getElementById("searchBar");
-searchBar.addEventListener("change", (e) => {
+searchBar.addEventListener("input", (e) => {
     let bookShelf = document.getElementById("bookShelf");
     let books = bookShelf.querySelectorAll("div");
     for(let i = 0; i < books.length; i ++){
